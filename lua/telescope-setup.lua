@@ -1,4 +1,5 @@
 -- [[ Configure Telescope ]]
+local Util = require("lazyvim.util")
 -- See `:help telescope` and `:help telescope.setup()`
 require('telescope').setup {
   defaults = {
@@ -77,5 +78,10 @@ vim.keymap.set('n', '<leader>sg', require('telescope.builtin').live_grep, { desc
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
+vim.keymap.set('n', "<leader>fr", "<cmd>Telescope oldfiles<cr>", {desc = "Recent" })
+vim.keymap.set('n', "<leader>fR", Util.telescope("oldfiles", { cwd = vim.loop.cwd() }), {desc = "Recent (cwd)" })
+  -- git
+vim.keymap.set('n', "<leader>gc", "<cmd>Telescope git_commits<CR>", {desc = "commits" })
+vim.keymap.set('n', "<leader>gs", "<cmd>Telescope git_status<CR>", {desc = "status" })
 
 -- vim: ts=2 sts=2 sw=2 et
