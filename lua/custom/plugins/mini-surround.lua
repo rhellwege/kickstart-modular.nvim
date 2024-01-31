@@ -1,9 +1,5 @@
 return {
   "echasnovski/mini.surround",
-  version = false,
-  config = function()
-    require("mini.surround").setup()
-  end,
   opts = {
     mappings = {
       add = "gsa", -- Add surrounding in Normal and Visual modes
