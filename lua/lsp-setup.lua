@@ -59,6 +59,7 @@ require('which-key').register {
   ['<leader>u'] = { name = '[U]I', _ = 'which_key_ignore' },
   ['<leader>q'] = { name = 'Sessions', _ = 'which_key_ignore' },
   ['<leader>x'] = { name = 'Trouble', _ = 'which_key_ignore' },
+  ['gs'] = { name = 'Surround', _ = 'which_key_ignore' },
 }
 -- register which-key VISUAL mode
 -- required for visual <leader>hs (hunk stage) to work
