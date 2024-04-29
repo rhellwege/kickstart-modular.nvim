@@ -83,6 +83,7 @@ require('mason-lspconfig').setup()
 --  define the property 'filetypes' to the map in question.
 M.servers = {
   clangd = {},   -- C/C++
+  nim_langserver = {},
   -- gopls = {},
   -- pyright = {},
   -- tsserver = {},
